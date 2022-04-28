@@ -17,5 +17,8 @@ runs:
     - uses: actions/checkout@v3
     - if: ${{ github.event_name != 'pull_request' }}
       shell: bash
-      run: echo 'this not a pull request event'
+      run: echo 'this is not a pull request event'
+    - if: ${{ github.event_name == 'pull_request' }}
+      shell: bash
+      run: echo 'this is a pull request event'
 
