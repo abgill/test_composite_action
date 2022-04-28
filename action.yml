@@ -12,4 +12,6 @@ outputs:
 runs:
   using: "composite"
   steps:
+    - shell: bash
+      run: echo 'hello ${{ inputs.who-to-greet }}'
     - uses: actions/checkout@v3
